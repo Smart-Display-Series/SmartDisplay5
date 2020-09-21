@@ -8,7 +8,7 @@ Welcome to SmartDisplay5's documentation!
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   
    
    object dictionary
    設定
