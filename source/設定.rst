@@ -1,6 +1,8 @@
 設定工控情境
 =============================
 
+.. image:: ./images/industry_demo.gif
+
 Step 1 Switch Pre-Operation Mode
 ---------------------------------------
 
