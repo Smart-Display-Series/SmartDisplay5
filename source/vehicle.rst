@@ -160,14 +160,18 @@ Step 4 Complete
 Step 5 Read/Write Value
 -------------------------
 
- Write Object 0x2000 can control gauge 
+.. sidebar:: Code for example
+
+   .. image:: ./images/industry_demo.gif
+
+Write Object 0x2000 can control gauge 
+
+the animote show as below.
+
+and show current ``value``.
+
+``datepicker``
  
- the animote show as below.
- 
- and show current value.
  
 
-.. image:: ./images/industry_demo.gif
- 
- 
 
