@@ -11,7 +11,7 @@ Welcome to SmartDisplay5's documentation!
    
    
    object dictionary
-   設定工控情境<設定.rst>
+   設定工控情境<industry.rst>
    設定車載情境<vehicle.rst>
    設定醫療情境<medical.rst>
 

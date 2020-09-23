@@ -3,9 +3,24 @@ object dictionary
 
 .. contents:: Table of Contents
 
+Introduction
+-------------
+
+SamrtDisplay5 Interface is Canbus.
+All graphic is updated by CANBUS-Interface.
+
+
 Object Index
 -----------------
+There are 10 OD entries which are for configuration of the items that can be displayed on 
+the screen. These are at location 0x2000 to 0x2009. Each object fully defines one screen item.  
+Each item has a set of sub-index items which are used to control the appearance of the item. 
+The exact functionality varies depending on the type of item selected. The template object is 
+shown below: 
 
+Provide EDS File as below.
+
+:download:`download SmartDisplay.eds <./file/SmartDisplay.eds>`
 
 Object Description
 ------------------
@@ -28,12 +43,10 @@ Object Description
 +-------------------------+-------------+-------+
 
 
-Type
----------
+Sub 1 - Type
+-------------
 
-.. role:: red
-
-I like color :red:`rubric`.
+The item type is selected according to the table below.
 
 .. role:: red
 
@@ -79,7 +92,7 @@ I like color :red:`rubric`.
 
 
 .. code-block:: c
-
+   
    typedef enum{
     
      TYPE_EMPTY = 0,
@@ -103,8 +116,12 @@ I like color :red:`rubric`.
      
   } OBJECT_TYPE;
 
-Style
----------
+Sub 5 - Style
+--------------
+
+The Style value is selected according to the table below.
+
+This fill value can display 不同 圖資。
 
 .. |button_0| image:: ./images/button_0.png
       :scale: 25%
@@ -140,47 +157,93 @@ Style
    :scale: 25%
 
 .. |Gauge_0| image:: ./images/Gauge_0.png
-   :scale: 15%
+   :scale: 20%
           
 .. |Gauge_1| image:: ./images/Gauge_1.png
-  :scale: 25%
+  :scale: 20%
       
 .. |Gauge_2| image:: ./images/Gauge_2.png
-  :scale: 15%
+  :scale: 20%
   
 .. |Gauge_3| image:: ./images/Gauge_3.png
-      :scale: 15%
+      :scale: 20%
           
 .. |Gauge_4| image:: ./images/Gauge_4.png
-  :scale: 15%
+  :scale: 20%
       
 .. |Gauge_5| image:: ./images/Gauge_5.png
+  :scale: 20%  
+    
+.. |Temperature_0| image:: ./images/Temperature_0.png
   :scale: 15%  
+  
+.. |Temperature_1| image:: ./images/Temperature_1.png
+  :scale: 15%
 
-+--------------+------------------------------------------------------------------------------------------------+
-|Sub 1         |Description                                                                                     |
-+==============+================================================================================================+
-|Image         |Simon                                                                                           |
-+--------------+----------------+---------------+---------------+---------------+---------------+---------------+
-|              |*0*             |   *1*         |   *2*         |   *3*         |  *4*          | *5*           |
-+              +----------------+---------------+---------------+---------------+---------------+---------------+
-|Gauge         ||Gauge_0|       | |Gauge_1|     | |Gauge_2|     | |Gauge_3|     | |Gauge_4|     | |Gauge_5|     |
-+--------------+----------------+---------------+---------------+---------------+---------------+---------------+
-|              |*0*             |*1*            |*2*            |*3*            |*4*            |*5*            |
-+              +----------------+---------------+---------------+---------------+---------------+---------------+
-|              ||button_0|      | |button_1|    | |button_2|    | |button_3|    | |button_4|    | |button_5|    |
-+              +----------------+---------------+---------------+---------------+---------------+---------------+
-|              |*6*             |*7*            |*8*            |*9*            |*10*           |               |
-+              +----------------+---------------+---------------+---------------+---------------+---------------+
-|Button        ||button_6|      | |button_7|    | |button_8|    | |button_9|    | |button_10|   |               |
-+--------------+----------------+---------------+---------------+---------------+---------------+---------------+
-|Toggle Button |A                                                                                               |
-+--------------+----------------+---------------+---------------+---------------+---------------+---------------+
-|Write Value   |A                                                                                               |
-+--------------+----------------+---------------+---------------+---------------+---------------+---------------+
-|Current Value |A                                                                                               |
-+--------------+----------------+---------------+---------------+---------------+---------------+---------------+
+.. |Temperature_2| image:: ./images/Temperature_2.png
+  :scale: 15%
+  
+.. |Temperature_3| image:: ./images/Temperature_3.png
+  :scale: 15%
+  
+.. |Circle_0| image:: ./images/CircleProgress_0.png
+  :scale: 25%
+  
+.. |Circle_1| image:: ./images/CircleProgress_1.png
+  :scale: 25%
+
++---------------+-----------------------------------------------------------------------------------------------+
+|Sub 1          |Description                                                                                    |
++===============+===============================================================================================+
+|Image          |Simon                                                                                          |
++---------------+-----------------+----------------+---------------+---------------+---------------+------------+
+|               |*0*              |   *1*          |   *2*         |   *3*         |  *4*          | *5*        |
++               +-----------------+----------------+---------------+---------------+---------------+------------+
+|Gauge          ||Gauge_0|        | |Gauge_1|      | |Gauge_2|     | |Gauge_3|     | |Gauge_4|     | |Gauge_5|  |
++---------------+-----------------+----------------+---------------+---------------+---------------+------------+
+|               |*0*              |*1*             |*2*            |*3*            |*4*            |*5*         |
++               +-----------------+----------------+---------------+---------------+---------------+------------+
+|               ||button_0|       | |button_1|     | |button_2|    | |button_3|    | |button_4|    | |button_5| |
++               +-----------------+----------------+---------------+---------------+---------------+------------+
+|               |*6*              |*7*             |*8*            |*9*            |*10*           |            |
++               +-----------------+----------------+---------------+---------------+---------------+------------+
+|Button         ||button_6|       | |button_7|     | |button_8|    | |button_9|    | |button_10|   |            |
++---------------+-----------------+----------------+---------------+---------------+---------------+------------+
+|Toggle Button  |                                                                                               |
++---------------+-----------------+----------------+---------------+---------------+---------------+------------+
+|               |*0*              |*1*             |*2*            | *3*           |               |            |
++               +-----------------+----------------+---------------+---------------+---------------+------------+
+|Temperature    ||Temperature_0|  ||Temperature_1| ||Temperature_2|||Temperature_3||                            |
++---------------+-----------------+----------------+---------------+---------------+---------------+------------+
+|               |*0*              |*1*             |               |               |               |            |
++---------------+-----------------+----------------+---------------+---------------+---------------+------------+
+|CircleProgress ||Circle_0|       ||Circle_1|      |               |               |                            |
++---------------+-----------------+----------------+---------------+---------------+---------------+------------+
 
 PDO Map
 ----------
 
+
+.. |PDO_1| image:: ./images/PDO_1.png
+  :scale: 40%  
+  
+.. |PDO_2| image:: ./images/PDO_2.png
+  :scale: 40%
+
+.. |PDO_3| image:: ./images/PDO_3.png
+  :scale: 40%
+
+PDO1 Mapping
+^^^^^^^^^^^^^
+
+|PDO_1|
+
+PDO2 Mapping
+^^^^^^^^^^^^^
+
+|PDO_2|
+
+PDO3 Mapping
+^^^^^^^^^^^^^
+
+|PDO_3|
