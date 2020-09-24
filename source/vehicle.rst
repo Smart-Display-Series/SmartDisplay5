@@ -130,7 +130,7 @@ Update Object 0x2001~0x2009
 
   This update object 0x2001 ~ 0x2009 through **canopen** ``SDO`` in the picture below.
 
-  .. figure:: ./images/Vehicle_Obj2001.png
+  .. image:: ./images/Vehicle_Obj2001.png
       :align: left                        
 
   .. Note::
@@ -138,7 +138,7 @@ Update Object 0x2001~0x2009
     put the object **0x2001**, set the item type **Battery**, and select style |Battery_1|
     plac x, y at 0x17, 0x49 
     
-  .. figure:: ./images/Vehicle_Obj2002.png
+  .. image:: ./images/Vehicle_Obj2002.png
     :align: left
       
   .. Note::
@@ -146,7 +146,7 @@ Update Object 0x2001~0x2009
     put the object **0x2002**, set the item type **Temperature**, and select style |Temperature_2|  
     plac x, y at 0x17, 0x49
       
-  .. figure:: ./images/Vehicle_Obj2003.png
+  .. image:: ./images/Vehicle_Obj2003.png
     :align: left
       
   .. Note::
@@ -154,7 +154,7 @@ Update Object 0x2001~0x2009
     put the object **0x2003**, set the item type **Toggle Button**, and select style |button_10|  
     plac x, y at 0x17, 0x49
       
-  .. figure:: ./images/Vehicle_Obj2004.png
+  .. image:: ./images/Vehicle_Obj2004.png
     :align: left
 
   .. Note::
@@ -162,7 +162,7 @@ Update Object 0x2001~0x2009
     put the object **0x2004**, set the item type **Toggle Button**, and select style |button_8|  
     plac x, y at 0x17, 0x49
       
-  .. figure:: ./images/Vehicle_Obj2005.png
+  .. image:: ./images/Vehicle_Obj2005.png
     :align: left
       
   .. Note::
@@ -170,28 +170,28 @@ Update Object 0x2001~0x2009
     put the object **0x2005**, set the item type **Indicator**, and select style |Indicator_0|  
     plac x, y at 0x17, 0x49
       
-  .. figure:: ./images/Vehicle_Obj2006.png
+  .. image:: ./images/Vehicle_Obj2006.png
     :align: left
       
   .. Note::
       
     put the object **0x2006**, set the item type **empty**.
 
-  .. figure:: ./images/Vehicle_Obj2007.png
+  .. image:: ./images/Vehicle_Obj2007.png
     :align: left
 
   .. Note::
           
     put the object **0x2007**, set the item type **empty**.
       
-  .. figure:: ./images/Vehicle_Obj2008.png
+  .. image:: ./images/Vehicle_Obj2008.png
     :align: left
 
   .. Note::
           
     put the object **0x2008**, set the item type **empty**.
       
-  .. figure:: ./images/Vehicle_Obj2009.png
+  .. image:: ./images/Vehicle_Obj2009.png
     :align: left
 
   .. Note::       
