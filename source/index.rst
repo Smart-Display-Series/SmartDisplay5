@@ -8,11 +8,10 @@ Welcome to SmartDisplay5's documentation!
 
 .. toctree::
    :maxdepth: 2
-   :hidden:
-   
+      
    object dictionary
    canbus<vehicle.rst>
-
+   
 
 Indices and tables
 ==================
