@@ -8,13 +8,10 @@ Welcome to SmartDisplay5's documentation!
 
 .. toctree::
    :maxdepth: 2
-   
+   :hidden:
    
    object dictionary
-   設定工控情境<industry.rst>
-   設定車載情境<vehicle.rst>
-   設定醫療情境<medical.rst>
-
+   canbus<vehicle.rst>
 
 
 Indices and tables
