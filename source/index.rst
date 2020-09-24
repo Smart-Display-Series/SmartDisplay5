@@ -3,8 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to SmartDisplay5's documentation!
-=========================================
+Welcome to Winstar SmartDisplay5's documentation!
+==========================================================
 
 .. toctree::
    :maxdepth: 2
