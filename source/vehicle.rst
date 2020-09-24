@@ -103,100 +103,77 @@ subIndex 0x05(Style)
     :scale: 5%
     
   .. note ::
-
-    put the object 0x2000, set the item type **Gauge**, and select style image |Gauge_5|  
-    plac x, y at 0x17, 0x49
+    
+    Filling a parameter **0x05** |Gauge_5| is for selecting **style** in **Gauge** type **0x02** 
+    which set at postion x = **0x17** , y = **0x49** in **0x2000** object.
   
 
 Update Object 0x2001~0x2009 
 """"""""""""""""""""""""""""""""""""""""""""""""""
   
 .. |Temperature_2| image:: ./images/Temperature_2.png
-  :scale: 20%
+  :scale: 15%
   
 .. |Battery_1| image:: ./images/Battery_1.png
-  :scale: 20%
+  :scale: 30%
   
 .. |button_8| image:: ./images/button_8.png
-  :scale: 20%  
+  :scale: 30%  
   
 .. |button_10| image:: ./images/button_10.png
-  :scale: 20%
+  :scale: 30%
   
 .. |Indicator_0| image:: ./images/Indicator_0.png
-  :scale: 20%
+  :scale: 30%
   
 .. 
 
   This update object 0x2001 ~ 0x2009 through **canopen** ``SDO`` in the picture below.
 
-  .. image:: ./images/Vehicle_Obj2001.png
-      :align: left                        
+  .. image:: ./images/Vehicle_Obj2001.png    
 
-  .. Note::
-
-    put the object **0x2001**, set the item type **Battery**, and select style |Battery_1|
-    plac x, y at 0x17, 0x49 
+  .. |br| raw:: html
+    
+    <br/>
+    
+  |br| Filling a parameter **0x01** |Battery_1| is for selecting **style** in **Battery** type **0x0A** 
+  which set at postion x = **0x19** , y = **0x1F** in **0x2001** object. 
     
   .. image:: ./images/Vehicle_Obj2002.png
-    :align: left
-      
-  .. Note::
-
-    put the object **0x2002**, set the item type **Temperature**, and select style |Temperature_2|  
-    plac x, y at 0x17, 0x49
-      
+  
+  |br| Filling a parameter **0x02** |Temperature_2| is for selecting **style** in **Temperature** type **0x09** 
+  which set at postion x = **0x0F** , y = **0x8C** in **0x2002** object.
+   
   .. image:: ./images/Vehicle_Obj2003.png
-    :align: left
-      
-  .. Note::
-
-    put the object **0x2003**, set the item type **Toggle Button**, and select style |button_10|  
-    plac x, y at 0x17, 0x49
+        
+  |br| Filling a parameter **0x0A** |button_10| is for selecting **style** in **Toggle Button** type **0x05** 
+  which set at postion x = **0xD4** , y = **0x1A** in **0x2003** object.
       
   .. image:: ./images/Vehicle_Obj2004.png
-    :align: left
-
-  .. Note::
-      
-    put the object **0x2004**, set the item type **Toggle Button**, and select style |button_8|  
-    plac x, y at 0x17, 0x49
+     
+  |br| Filling a parameter **0x08** |button_8| is for selecting **style** in **Toggle Button** type **0x05** 
+  which set at postion x = **0xB2** , y = **0x98** in **0x2004** object.
       
   .. image:: ./images/Vehicle_Obj2005.png
-    :align: left
-      
-  .. Note::
-    
-    put the object **0x2005**, set the item type **Indicator**, and select style |Indicator_0|  
-    plac x, y at 0x17, 0x49
+   
+  |br| Filling a parameter **0x00** |Indicator_0| is for selecting **style** in **Indicator** type **0x0C** 
+  which set at postion x = **0x6B** , y = **0x2E** in **0x2005** object.
       
   .. image:: ./images/Vehicle_Obj2006.png
-    :align: left
       
-  .. Note::
-      
-    put the object **0x2006**, set the item type **empty**.
+  |br| put the object **0x2006**, set the item type **empty**.
 
   .. image:: ./images/Vehicle_Obj2007.png
-    :align: left
 
-  .. Note::
-          
-    put the object **0x2007**, set the item type **empty**.
-      
+  |br| put the object **0x2007**, set the item type **empty**.
+    
   .. image:: ./images/Vehicle_Obj2008.png
-    :align: left
-
-  .. Note::
-          
-    put the object **0x2008**, set the item type **empty**.
-      
+    
+  |br| put the object **0x2008**, set the item type **empty**.
+    
   .. image:: ./images/Vehicle_Obj2009.png
-    :align: left
 
-  .. Note::       
-
-    put the object **0x2009**, set the item type **empty**.
+  |br| put the object **0x2009**, set the item type **empty**.
 
 3. Setup Background
 ---------------------------------------------
@@ -233,7 +210,7 @@ Update Object 0x2001~0x2009
   
 .. epigraph::
 
-  To put a node 0x7B(SmartDisplay5) in operational mode 
+  To put a node 0x7B **SmartDisplay5** in operational mode 
   
   +--------+------+------------------------+
   |ID      |DLC   |Data Byte(s)            |
@@ -255,6 +232,6 @@ Update Object 0x2001~0x2009
 ..
 
     Write Object index 0x2000 subindx 0x07 ``set value`` **0~100** through CANOPEN ``PDO``
-    that can control gauge the animation show as right.
+    that can control gauge which shown as right animation.
 
 
