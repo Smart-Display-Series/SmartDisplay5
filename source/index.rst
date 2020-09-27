@@ -9,8 +9,8 @@ Welcome to Winstar SmartDisplay5's documentation!
 .. toctree::
    :maxdepth: 2
       
-   object dictionary
-   canbus<vehicle.rst>
+   Object Dictionary<object dictionary.rst>
+   Screen Layout Log<vehicle.rst>
    
 
 Indices and tables

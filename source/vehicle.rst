@@ -1,18 +1,18 @@
-Screen Layout
+Screen Layout Log
 =============================
 
 .. contents:: Table of Contents
 
-Screen Layout Log Analysis
----------------------------------
 
 ..
 
-  The Screen layout described in this section is intended to demonstrate the setup of vehicle 
-  situation that can be used on the **SmartDisplay5**.
-
-  This log shows the control of each object parameter ``x``, ``y``, ``style`` 
-  through the canopen method ``SDO``, ``NMT`` in the following content
+  The Screen layout described is intended to demonstrate 
+  the setup of the vehicle situation that can use on the **SmartDisplay 5**.
+  
+  .. note::
+  
+    The log analysis further indicates that shows the control of each object parameter ``behavior type``, 
+    ``x``, ``y``, ``style`` through the CANopen ``SDO``, ``NMT`` in the following content.
 
 .. |CanOpen_Form| image:: ./images/CanOpen_Form.png
       :scale: 100%
@@ -24,29 +24,30 @@ Screen Layout Log Analysis
   To put a node **0x7B** in pre-operational mode 
   
   +--------+------+------------------------+
-  |ID      |DLC   |Data Byte(s)            |
+  |COB-ID  |DLC   |Data Byte(s)            |
   +========+======+========================+
   |0x000   |2     |80 7B                   |
   +--------+------+------------------------+
 
-  .. note::
+  .. tip::
   
-    the node id **0x7B** is **SmartDisplay5** canopen id.
+    The COB-ID is the 11-bit id of a CAN-frame as a communication object identifier in CANopen.
+    The node id **0x7B** is **SmartDisplay5** CANopen id.
 
 2. Setup Object 
 -------------------------
 
-Set up Obj Index 0x2000
+Setup Obj Index 0x2000
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 subIndex 0x01(Item Type)
 """""""""""""""""""""""""
 
   The Host send item value ``2`` to **object index** 0x2000 **subindex** 0x01 through 
-  canopen ``SDO``
+  CANopen ``SDO``
 
   +--------+------+------------------------+---------------------------+
-  |ID      |DLC   |Data Byte(s)            |Packet Direction           |
+  |COB-ID  |DLC   |Data Byte(s)            |Packet Direction           |
   +========+======+========================+===========================+
   |0x67B   |8     |2B 00 20 01 02 00 00 00 | **Host -> SmartDisplay5** |
   +--------+------+------------------------+---------------------------+
@@ -61,10 +62,10 @@ subIndex 0x03(position X)
 """""""""""""""""""""""""
 
   The Host send position X value ``0x17`` to **object index** 0x2000 **subindex** 0x03 through 
-  canopen ``SDO``.
+  CANopen ``SDO``.
   
   +--------+------+------------------------+---------------------------+
-  |ID      |DLC   |Data Byte(s)            |Packet Direction           |
+  |COB-ID  |DLC   |Data Byte(s)            |Packet Direction           |
   +========+======+========================+===========================+
   |0x67B   |8     |2B 00 20 03 17 00 00 00 | **Host -> SmartDisplay5** |
   +--------+------+------------------------+---------------------------+
@@ -75,10 +76,10 @@ subIndex 0x04(position Y)
 """""""""""""""""""""""""
 
   The Host send position Y value ``0x49`` to **object index** 0x2000 **subindex** 0x04 through 
-  canopen ``SDO``.
+  CANopen ``SDO``.
 
   +--------+------+------------------------+---------------------------+
-  |ID      |DLC   |Data Byte(s)            |Packet Direction           |
+  |COB-ID  |DLC   |Data Byte(s)            |Packet Direction           |
   +========+======+========================+===========================+
   |0x67B   |8     |2B 00 20 04 49 00 00 00 | **Host -> SmartDisplay5** |
   +--------+------+------------------------+---------------------------+
@@ -89,10 +90,10 @@ subIndex 0x05(Style)
 """""""""""""""""""""""""
 
   The Host send position Y value ``0x49`` to **object index** 0x2000 **subindex** 0x05 through 
-  canopen ``SDO``.
+  CANopen ``SDO``.
 
   +--------+------+------------------------+---------------------------+
-  |ID      |DLC   |Data Byte(s)            |Packet Direction           |
+  |COB-ID  |DLC   |Data Byte(s)            |Packet Direction           |
   +========+======+========================+===========================+
   |0x67B   |8     |2B 00 20 05 05 00 00 00 | **Host -> SmartDisplay5** |
   +--------+------+------------------------+---------------------------+
@@ -128,7 +129,7 @@ Update Object 0x2001~0x2009
   
 .. 
 
-  This update object 0x2001 ~ 0x2009 through **canopen** ``SDO`` in the picture below.
+  This update object 0x2001 ~ 0x2009 through **CANopen** ``SDO`` in the picture below.
 
   .. image:: ./images/Vehicle_Obj2001.png    
 
@@ -199,7 +200,7 @@ Update Object 0x2001~0x2009
   Select Picture value **0x01** to setting backgruond picturen at operation-mode through Canopne ``SDO``.
 
   +--------+------+------------------------+---------------------------+
-  |ID      |DLC   |Data Byte(s)            |Packet Direction           |
+  |COB-ID  |DLC   |Data Byte(s)            |Packet Direction           |
   +========+======+========================+===========================+
   |0x67B   |8     |2F 00 21 00 01 00 00 00 | **Host -> SmartDisplay5** |
   +--------+------+------------------------+---------------------------+
@@ -215,12 +216,12 @@ Update Object 0x2001~0x2009
   To put a node 0x7B **SmartDisplay5** in operational mode 
   
   +--------+------+------------------------+
-  |ID      |DLC   |Data Byte(s)            |
+  |COB-ID  |DLC   |Data Byte(s)            |
   +========+======+========================+
   |0x000   |2     |01 7B                   |
   +--------+------+------------------------+
   
-  you can see vehicle layourt screen at **smartdiplay5**.
+  you can see vehicle layout screen at **smartdiplay5**.
 
   .. image:: ./images/Vehicle_total_set.png
     
@@ -233,7 +234,7 @@ Update Object 0x2001~0x2009
 
 ..
 
-    Write Object index 0x2000 subindx 0x07 ``set value`` \ **0~100** \ through CANOPEN ``PDO``
+    Write Object index 0x2000 subindx 0x07 ``set value`` \ **0~100** \ through CANopen ``PDO``
     that can control gauge which shown as right animation.
 
 
