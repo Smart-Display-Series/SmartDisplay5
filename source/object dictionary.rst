@@ -9,6 +9,16 @@ Introduction
   SamrtDisplay5 Interface is Canbus.
   All graphic is updated by CANBUS-Interface.
 
+Electrical
+---------------------
+
+  **CAN interface**
+  
+  +------------+-----------------------+
+  |CAN protocol|CANopen profiles DS301 |
+  +------------+-----------------------+
+  |Baud rates  |250kbits/s             |
+  +------------+-----------------------+ 
 
 Object Index
 -----------------
@@ -21,20 +31,20 @@ Object Index
   shown below: 
 
   +-------------------------+-------------+-------+ 
-  | **Object Index 0x2000** |Description  | Value |
+  | **Object Index 0x2000** |Description  | Type  |  
   | **to 0x2009**           |             |       |
   +=========================+=============+=======+
-  | Sub 1                   | Type        |       |
+  | Sub 1                   | Type        | U8    |
   +-------------------------+-------------+-------+
-  | Sub 3                   | X position  |       |
+  | Sub 3                   | X position  | INT16 |
   +-------------------------+-------------+-------+
-  | Sub 4                   | Y position  |       |
+  | Sub 4                   | Y position  | INT16 |
   +-------------------------+-------------+-------+
-  | Sub 5                   | Style       |       |
+  | Sub 5                   | Style       | U8    |
   +-------------------------+-------------+-------+
-  | Sub 7                   | Set value   |       |
+  | Sub 7                   | Set value   | U16   |
   +-------------------------+-------------+-------+
-  | Sub 8                   | Get value   |       |
+  | Sub 8                   | Get value   | U16   |
   +-------------------------+-------------+-------+
   
   Provide EDS File as below.
@@ -192,6 +202,7 @@ Sub 5 - Style
 PDO Map
 ----------
 
+
 .. |PDO_1| image:: ./images/PDO_1.png
   :scale: 40%  
   
@@ -202,6 +213,11 @@ PDO Map
   :scale: 40%
 
 .. 
+
+  The Obj 0x2000~0x2009 can acquire the data that it displays either using the CANopen ``SDO``, 
+  or using the CANopen ``PDO`` protocol.
+  
+  The PRDOs configure as below.
 
   **PDO1 Mapping**
 
