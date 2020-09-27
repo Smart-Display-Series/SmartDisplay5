@@ -7,9 +7,9 @@ Introduction
 -------------
 ..
 
-  **SamrtDisplay5** Interface is Canbus.
-  All graphic is updated by CANBUS-Interface.
-  
+  **SamrtDisplay5** Hardware Interface is Canbus.
+  All graphics access the object dictionary by CANopen.
+    
   .. image:: ./images/vehicle-animation.gif
 
 Electrical
