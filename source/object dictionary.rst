@@ -6,8 +6,9 @@ object dictionary
 Introduction
 -------------
 ..
-  SamrtDisplay5 Interface is Canbus.
-  All graphic is updated by CANBUS-Interface.
+
+  **SamrtDisplay5** Interface is Canbus.
+  All graphic access control by CANopen.
 
 
 Object Index
