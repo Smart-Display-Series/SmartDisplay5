@@ -7,21 +7,9 @@ Introduction
 -------------
 ..
 
-  **SamrtDisplay5** Hardware Interface is Canbus.
-  All graphics access the object dictionary by CANopen.
-    
-  .. image:: ./images/vehicle-animation.gif
+  **SamrtDisplay5** Interface is Canbus.
+  All graphic access control by CANopen.
 
-Electrical
----------------------
-
-  **CAN interface**
-  
-  +------------+-----------------------+
-  |CAN protocol|CANopen profiles DS301 |
-  +------------+-----------------------+
-  |Baud rates  |250kbits/s             |
-  +------------+-----------------------+ 
 
 Object Index
 -----------------
@@ -34,20 +22,20 @@ Object Index
   shown below: 
 
   +-------------------------+-------------+-------+ 
-  | **Object Index 0x2000** |Description  | Type  |  
+  | **Object Index 0x2000** |Description  | Value |
   | **to 0x2009**           |             |       |
   +=========================+=============+=======+
-  | Sub 1                   |Behavior Type| U8    |
+  | Sub 1                   | Type        |       |
   +-------------------------+-------------+-------+
-  | Sub 3                   | X position  | INT16 |
+  | Sub 3                   | X position  |       |
   +-------------------------+-------------+-------+
-  | Sub 4                   | Y position  | INT16 |
+  | Sub 4                   | Y position  |       |
   +-------------------------+-------------+-------+
-  | Sub 5                   | Style       | U8    |
+  | Sub 5                   | Style       |       |
   +-------------------------+-------------+-------+
-  | Sub 7                   | Set value   | U16   |
+  | Sub 7                   | Set value   |       |
   +-------------------------+-------------+-------+
-  | Sub 8                   | Get value   | U16   |
+  | Sub 8                   | Get value   |       |
   +-------------------------+-------------+-------+
   
   Provide EDS File as below.
@@ -63,7 +51,7 @@ Sub 1 - Type
   The item type is selected according to the table below.
 
   +-------------------------+------------------+-------+
-  | **Behavior Type**       |Description       | Value |
+  | **Type**                |Description       | Value |
   +=========================+==================+=======+
   | Reserve                 |                  |0      |
   +-------------------------+------------------+-------+
@@ -107,7 +95,7 @@ Sub 5 - Style
 
   The Style value is selected according to the table below.
 
-  This fill value can display a different style.
+  This fill value can display diffent style.
 
   .. |button_0| image:: ./images/button_0.png
         :scale: 25%
@@ -177,38 +165,9 @@ Sub 5 - Style
     
   .. |Circle_1| image:: ./images/CircleProgress_1.png
     :scale: 25%
-    
-  .. |Vertical| image:: ./images/VerticalSlider_0.png
-    :scale: 25%
-    
-  .. |Horizontal| image:: ./images/HorizontalSlider_0.png
-    :scale: 25%  
-  
-  .. |numberStr_0| image:: ./images/numberStr_0.png
-    :scale: 35% 
-    
-  .. |numberStr_1| image:: ./images/numberStr_1.png
-    :scale: 35% 
-
-  .. |numberStr_2| image:: ./images/numberStr_2.png
-    :scale: 35% 
-    
-  .. |Battery_0| image:: ./images/Battery_0.png
-    :scale: 25%
-    
-  .. |Battery_1| image:: ./images/Battery_1.png
-    :scale: 25%  
-   
-  .. |ImageProg_0| image:: ./images/ImageProgress_0.png
-    :scale: 25%
-    
-  .. |ImageProg_1| image:: ./images/ImageProgress_1.png
-    :scale: 25% 
-   
 
   +---------------+-----------------------------------------------------------------------------------------------+
-  |**Behavior     |                                                                                               |
-  |type**         |**Style Value**                                                                                |
+  |**type**       |**Style Valeu**                                                                                |
   +===============+=================+================+===============+===============+===============+============+
   |               |*0*              |   *1*          |   *2*         |   *3*         |  *4*          | *5*        |
   +               +-----------------+----------------+---------------+---------------+---------------+------------+
@@ -228,33 +187,11 @@ Sub 5 - Style
   +---------------+-----------------+----------------+---------------+---------------+---------------+------------+
   |               |*0*              |*1*             |               |               |               |            |
   +---------------+-----------------+----------------+---------------+---------------+---------------+------------+
-  |Battery        ||Battery_0|      ||Battery_1|     |               |               |                            |
-  +---------------+-----------------+----------------+---------------+---------------+---------------+------------+
-  |               |*0*              |*1*             |               |               |               |            |
-  +---------------+-----------------+----------------+---------------+---------------+---------------+------------+
   |CircleProgress ||Circle_0|       ||Circle_1|      |               |               |                            |
-  +---------------+-----------------+----------------+---------------+---------------+---------------+------------+
-  |               |*0*              |                |               |               |               |            |
-  +---------------+-----------------+----------------+---------------+---------------+---------------+------------+
-  |ImageProgress  ||ImageProg_0|    ||ImageProg_1|   |               |               |                            |
-  +---------------+-----------------+----------------+---------------+---------------+---------------+------------+
-  |               |*0*              |                |               |               |               |            |
-  +---------------+-----------------+----------------+---------------+---------------+---------------+------------+
-  |Vertical Slider||Vertical|       |                |               |               |                            |
-  +---------------+-----------------+----------------+---------------+---------------+---------------+------------+
-  |               |*0*              |                |               |               |               |            |
-  +---------------+-----------------+----------------+---------------+---------------+---------------+------------+
-  |Horizontal     ||Horizontal|     |                |               |               |               |            |
-  |Slider         |                 |                |               |               |               |            |   
-  +---------------+-----------------+----------------+---------------+---------------+---------------+------------+
-  |               |*0*              |*1*             |*2*            |               |               |            |
-  +---------------+-----------------+----------------+---------------+---------------+---------------+------------+
-  |Number String  ||numberStr_0|    ||numberStr_1|   ||numberStr_2|  |               |               |            |
   +---------------+-----------------+----------------+---------------+---------------+---------------+------------+
 
 PDO Map
 ----------
-
 
 .. |PDO_1| image:: ./images/PDO_1.png
   :scale: 40%  
@@ -266,11 +203,6 @@ PDO Map
   :scale: 40%
 
 .. 
-
-  The Obj 0x2000~0x2009 can acquire the data that it displays either using the CANopen ``SDO``, 
-  or using the CANopen ``PDO`` protocol.
-  
-  The PRDOs configure as below.
 
   **PDO1 Mapping**
 
